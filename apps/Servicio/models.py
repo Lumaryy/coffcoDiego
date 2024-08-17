@@ -1,4 +1,9 @@
 from django.db import models
+from apps.Ambiente.models import Ambiente
+from apps.Muestra.models import Muestra
+from apps.TipoServicio.models import Tiposervicio
+from apps.Precio.models import Precio
+from apps.Usuarios.models import Usuarios
 
 class Servicio(models.Model):
     nombre_servicio = models.CharField(max_length=100)

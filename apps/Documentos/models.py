@@ -1,4 +1,7 @@
 from django.db import models
+from apps.TipoServicio.models import Tiposervicio
+from apps.tipoDocumento.models import TipoDocumento
+
 
 class Documentos(models.Model):
     nombre = models.CharField(max_length=100)
@@ -8,7 +11,7 @@ class Documentos(models.Model):
     fecha_fimision = models.DateField()
     tiposervicio = models.ForeignKey(Tiposervicio, on_delete=models.CASCADE)
     tipo_documento = models.ForeignKey(TipoDocumento, on_delete=models.CASCADE)
-    logos = models.ForeignKey(Logos, on_delete=models.CASCADE)
+    #logos = models.ForeignKey(Logos, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre

@@ -1,4 +1,5 @@
 from django.db import models
+from apps.Versiones.models import Versiones
 
 class Variables(models.Model):
     nombre = models.CharField(max_length=50)
