@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class TiposervicioConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'TipoServicio'
+    name = 'apps.TipoServicio'

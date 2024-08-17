@@ -1,4 +1,5 @@
 from django.db import models
+from apps.TipoServicio.models import Tiposervicio
 
 class Precio(models.Model):
     estado_precio = models.CharField(max_length=45)

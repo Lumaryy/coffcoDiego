@@ -1,4 +1,5 @@
 from django.db import models
+from apps.Usuarios.models import Usuarios
 
 class Muestra(models.Model):
     cantidad_entrada = models.FloatField()

@@ -1,4 +1,6 @@
 from django.db import models
+from apps.tipoDocumento.models import TipoDocumento
+from apps.Rol.models import Rol
 
 class Usuarios(models.Model):
     nombre = models.CharField(max_length=45)
