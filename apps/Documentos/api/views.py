@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import  Documentos
-from Serializer import DocumentosSerializer
+from apps.Documentos.models import  Documentos
+from apps.Documentos.api.Serializer import DocumentosSerializer
 
 class DocumentoViewSet(viewsets.ModelViewSet):
     queryset = Documentos.objects.all()

@@ -1,9 +1,8 @@
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import RolViewSet
+from apps.Rol.api.views import RolViewSet
 
-router = DefaultRouter()
-
-router.register(r'rol', RolViewSet)
+router_rol = DefaultRouter()
+router_rol.register(prefix='rol', basename='rol', viewset=RolViewSet)
 

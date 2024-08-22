@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import *
+from apps.Precio.models import Precio
 
 class PrecioSerializer(serializers.ModelSerializer):
     class Meta:

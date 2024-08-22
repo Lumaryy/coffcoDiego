@@ -1,9 +1,8 @@
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import  VariableViewSet
+from apps.Variables.api.views import  VariableViewSet
 
-router = DefaultRouter()
-
-router.register(r'variables', VariableViewSet)
+router_variables = DefaultRouter()
+router_variables.register(prefix='variables', basename='variables', viewset=VariableViewSet)
 

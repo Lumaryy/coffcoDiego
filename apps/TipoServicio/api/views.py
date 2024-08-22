@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import Tiposervicio
-from Serializer import TiposervicioSerializer
+from apps.TipoServicio.models import Tiposervicio
+from apps.TipoServicio.api.Serializer import TiposervicioSerializer
 
 class TipoServicioViewSet(viewsets.ModelViewSet):
     queryset = Tiposervicio.objects.all()

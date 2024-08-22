@@ -1,4 +1,6 @@
 from django.contrib import admin
 from .models import Logos
 
-admin.site.register(Logos)
+@admin.register(Logos)
+class LogosAdmin(admin.ModelAdmin):
+    list_display = ['logo', 'estado']

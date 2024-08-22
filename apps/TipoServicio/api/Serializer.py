@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import *
+from apps.TipoServicio.models import Tiposervicio
 
 class TiposervicioSerializer(serializers.ModelSerializer):
     class Meta:

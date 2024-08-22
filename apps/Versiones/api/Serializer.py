@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import *
+from apps.Versiones.models import Versiones
 
 class VersionesSerializer(serializers.ModelSerializer):
     class Meta:

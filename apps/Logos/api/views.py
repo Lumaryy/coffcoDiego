@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import Logos
-from Serializer import LogosSerializer 
+from apps.Logos.models import Logos
+from apps.Logos.api.Serializer import LogosSerializer 
 
 class LogoViewSet(viewsets.ModelViewSet):
     queryset = Logos.objects.all()

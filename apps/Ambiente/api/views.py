@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import Ambiente
-from Serializer import AmbienteSerializer
+from apps.Ambiente.models import Ambiente
+from apps.Ambiente.api.Serializer import AmbienteSerializer
 
 class AmbienteViewSet(viewsets.ModelViewSet):
     queryset = Ambiente.objects.all()

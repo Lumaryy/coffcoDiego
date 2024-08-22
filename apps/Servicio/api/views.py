@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import Servicio
-from Serializer import ServicioSerializer
+from apps.Servicio.models import Servicio
+from apps.Servicio.api.Serializer import ServicioSerializer
 
 class ServicioViewSet(viewsets.ModelViewSet):
     queryset = Servicio.objects.all()

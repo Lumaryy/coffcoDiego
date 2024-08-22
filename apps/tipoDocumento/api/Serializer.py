@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import *
+from apps.tipoDocumento.models import TipoDocumento
 
 class TipoDocumentoSerializer(serializers.ModelSerializer):
     class Meta:

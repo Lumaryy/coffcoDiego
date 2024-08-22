@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import *
+from apps.Variables.models import Variables
 
 class VariablesSerializer(serializers.ModelSerializer):
     class Meta:

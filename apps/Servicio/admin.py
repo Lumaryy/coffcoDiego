@@ -1,4 +1,6 @@
 from django.contrib import admin
 from .models import Servicio
 
-admin.site.register(Servicio)
+@admin.register(Servicio)
+class ServicioAdmin(admin.ModelAdmin):
+    list_display = ['nombre_servicio','ambiente','muestra','fecha','tiposervicio','precio','usuarios','estado']

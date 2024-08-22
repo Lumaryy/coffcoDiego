@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import Rol
-from Serializer import RolSerializer
+from apps.Rol.models import Rol
+from apps.Rol.api.Serializer import RolSerializer
 
 class RolViewSet(viewsets.ModelViewSet):
     queryset = Rol.objects.all()

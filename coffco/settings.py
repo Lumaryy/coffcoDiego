@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'apps.Ambiente',
     'apps.Documentos',
+    'apps.Detalle',
     'apps.Finca',
+    'apps.Logo_documentos',
     'apps.Logos',
     'apps.Muestra',
     'apps.Municipio',
@@ -95,16 +97,21 @@ WSGI_APPLICATION = 'coffco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'coffco',
+        'NAME': 'coffcoDjango',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',  # O la dirección de tu servidor de base de datos
-        'PORT': '3306',       # El puerto predeterminado de MySQL
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'unix_socket': '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
+        },
     }
 }
+
 
 
 # Password validation

@@ -1,4 +1,6 @@
 from django.contrib import admin
 from .models import TipoDocumento
 
-admin.site.register(TipoDocumento)
+@admin.register(TipoDocumento)
+class TipoDocumentoAdmin(admin.ModelAdmin):
+    list_display = ['nombreDocumento','estado']

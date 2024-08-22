@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import Municipio
-from Serializer import MunicipioSerializer
+from apps.Municipio.models import Municipio
+from apps.Municipio.api.Serializer import MunicipioSerializer
 
 class MunicipioViewSet(viewsets.ModelViewSet):
     queryset = Municipio.objects.all()

@@ -9,7 +9,7 @@ class Documentos(models.Model):
     fecha_entrega = models.DateField()
     codigo_documentos = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=100)
-    fecha_fimision = models.DateField()
+    fecha_emision = models.DateField()
     tiposervicio = models.ForeignKey(Tiposervicio, on_delete=models.CASCADE)
     tipo_documento = models.ForeignKey(TipoDocumento, on_delete=models.CASCADE)
     logos = models.ForeignKey(Logos, on_delete=models.CASCADE)

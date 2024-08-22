@@ -1,4 +1,6 @@
 from django.contrib import admin
 from .models import Variables
 
-admin.site.register(Variables)
+@admin.register(Variables)
+class VariablesAdmin(admin.ModelAdmin):
+    list_display = ['nombre','estado','versiones']

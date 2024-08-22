@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from models import  Precio
-from Serializer import PrecioSerializer
+from apps.Precio.models import  Precio
+from apps.Precio.api.Serializer import PrecioSerializer
 
 class PrecioViewSet(viewsets.ModelViewSet):
     queryset = Precio.objects.all()
