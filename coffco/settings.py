@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'rest_framework',
     'corsheaders',
     'apps.Ambiente',
@@ -101,14 +102,12 @@ WSGI_APPLICATION = 'coffco.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'coffcoDjango',
+        'NAME': 'coffcodjango',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3306',
-        'OPTIONS': {
-            'unix_socket': '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
-        },
+        'PORT': '3307',
+        
     }
 }
 
@@ -149,6 +148,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT='./static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

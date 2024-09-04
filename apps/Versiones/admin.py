@@ -3,4 +3,4 @@ from .models import Versiones
 
 @admin.register(Versiones)
 class VersionesAdmin(admin.ModelAdmin):
-    list_display = ['version','usuarios','documentos','estado','fecha_version']
+    list_display = ['version','documentos','estado','nombre_documento','fecha_version']

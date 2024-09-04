@@ -3,4 +3,4 @@ from .models import Logos
 
 @admin.register(Logos)
 class LogosAdmin(admin.ModelAdmin):
-    list_display = ['logo', 'estado']
+    list_display = ['ruta', 'estado','nombre']

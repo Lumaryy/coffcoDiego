@@ -1,10 +1,22 @@
 from django.db import models
-from apps.Versiones.models import Versiones
 
 class Variables(models.Model):
+
+    class TipoDatoChoices(models.TextChoices):
+        TEXT = 'text', 'Text'
+        NUMBER = 'number', 'Number'
+        DATE = 'date', 'Date'
+
     nombre = models.CharField(max_length=50)
-    estado = models.BooleanField()
-    versiones = models.ForeignKey(Versiones, on_delete=models.CASCADE)
+    estado = models.BooleanField(default=True)  
+    tipo_dato = models.CharField(
+        max_length=10,
+        choices=TipoDatoChoices.choices,
+        default=TipoDatoChoices.TEXT,
+    )
 
     def __str__(self):
         return self.nombre
+
+    def get_estado_display(self):
+        return "Activo" if self.estado else "Inactivo"
