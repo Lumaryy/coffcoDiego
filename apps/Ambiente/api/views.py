@@ -5,3 +5,11 @@ from apps.Ambiente.api.Serializer import AmbienteSerializer
 class AmbienteViewSet(viewsets.ModelViewSet):
     serializer_class = AmbienteSerializer
     queryset = Ambiente.objects.all()
+
+
+
+
+
+
+
+
