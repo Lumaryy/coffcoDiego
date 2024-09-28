@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'apps.Ambiente',
+    'apps.Cambios',
     'apps.Documentos',
     'apps.Detalle',
     'apps.Finca',

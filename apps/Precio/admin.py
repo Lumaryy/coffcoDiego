@@ -3,4 +3,4 @@ from .models import Precio
 
 @admin.register(Precio)
 class PrecioAdmin(admin.ModelAdmin):
-    list_display = ['estado_precio', 'presentacion','precio','tiposervicio']
+    list_display = ['estado_precio', 'presentacion','precio','tiposervicio','unidad_medida']

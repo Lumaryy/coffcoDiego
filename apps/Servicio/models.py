@@ -6,17 +6,27 @@ from apps.Precio.models import Precio
 from apps.Usuarios.models import Usuarios
 
 class Servicio(models.Model):
-    nombre = models.CharField(max_length=100)
+    EN_PROCESO = 'en proceso'
+    TERMINADO = 'terminado'
+
+    ESTADO_CHOICES = [
+        (EN_PROCESO, 'En Proceso'),
+        (TERMINADO, 'Terminado'),
+    ]
+
+    tiposervicio = models.ForeignKey(Tiposervicio, on_delete=models.CASCADE)
+    fecha = models.DateField()
     ambiente = models.ForeignKey(Ambiente, on_delete=models.CASCADE)
     muestra = models.ForeignKey(Muestra, on_delete=models.CASCADE)
-    fecha = models.DateField()
-    tiposervicio = models.ForeignKey(Tiposervicio, on_delete=models.CASCADE)
-    precio = models.ForeignKey(Precio, on_delete=models.CASCADE)
     usuarios = models.ForeignKey(Usuarios, on_delete=models.CASCADE)
-    estado = models.BooleanField(default=True) 
+    cantidad_salida = models.DecimalField(max_digits=10, decimal_places=2)
+    fecha_fin = models.DateField(null=True, blank=True)
+    estado = models.CharField(
+        max_length=11, 
+        choices=ESTADO_CHOICES, 
+        default=EN_PROCESO
+    )
 
     def __str__(self):
-        return self.nombre
+        return f"{self.tiposervicio} - {self.fecha}"
 
-    def get_estado_display(self):
-        return "Activo" if self.estado else "Inactivo"

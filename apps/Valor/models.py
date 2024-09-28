@@ -4,7 +4,7 @@ from apps.Detalle.models import Detalle
 
 
 class Valor(models.Model):
-    valor = models.CharField(max_length=45)
+    valor = models.CharField(max_length=100)
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
     detalle = models.ForeignKey(Detalle, on_delete=models.CASCADE)
 

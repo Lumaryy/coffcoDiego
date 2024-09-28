@@ -3,4 +3,4 @@ from .models import Variables
 
 @admin.register(Variables)
 class VariablesAdmin(admin.ModelAdmin):
-    list_display = ['nombre','estado','tipo_dato']
+    list_display = ['nombre','estado','tipo_dato','unidad_medida']
