@@ -3,7 +3,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 from apps.Ambiente.api.urls import router_ambiente
-from apps.cambios.api.urls import router_cambios
+from apps.Cambios.api.urls import router_cambios
 from apps.Detalle.api.urls import router_detalle
 from apps.Documentos.api.urls import router_documentos
 from apps.Finca.api.urls import router_finca

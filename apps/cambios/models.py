@@ -6,7 +6,6 @@ class Cambios(models.Model):
     PENDIENTE = 'pendiente'
     APROBADO = 'aprobado'
     DESAPROBADO = 'desaprobado'
-    
     ESTADO_CAMBIO_CHOICES = [
         (PENDIENTE, 'Pendiente'),
         (APROBADO, 'Aprobado'),
